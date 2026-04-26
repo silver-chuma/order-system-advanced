@@ -17,7 +17,7 @@ The system follows a **Clean Architecture-inspired structure**:
 
 API → Application → Infrastructure → Domain
 
-### 🔹 Layers
+### Layers
 
 **API**
 - Handles HTTP requests
@@ -182,30 +182,69 @@ Example logs:
 
 ---
 
-## ⚖️ Design Decisions & Trade-offs
+## Architecture Decisions
 
-### SQLite
-- Lightweight and fast setup
-- Easy to demo
-- Replaceable with PostgreSQL in production
+### Optimistic Concurrency (RowVersion)
+- Chosen to handle high-concurrency scenarios without locking rows
+- Prevents race conditions while maintaining performance
+- Works well with EF Core and lightweight databases like SQLite
+
+---
+
+### Transactions for Atomicity
+- Ensures stock updates and order creation happen as a single unit
+- Prevents partial updates and inconsistent states
+- Guarantees data integrity under failure conditions
+
+---
+
+### Retry Strategy (Polly)
+- Handles transient concurrency conflicts gracefully
+- Automatically retries failed operations due to race conditions
+- Improves system resilience under load
+
+---
+
+### Idempotency Handling
+- Prevents duplicate order creation from repeated requests
+- Ensures safe retries in case of network issues or client retries
+- Implemented using unique Idempotency-Key per request
+
+---
+
+## Trade-offs
+
+### Optimistic vs Pessimistic Locking
+- Chose optimistic concurrency to avoid database locks and improve throughput
+- Trade-off: requires retry logic to handle conflicts
+
+---
+
+### SQLite vs Production Databases
+- SQLite chosen for simplicity and ease of setup
+- Trade-off: limited concurrency capabilities compared to PostgreSQL/MySQL
 
 ---
 
 ### In-Memory Event Handling
-- Simple implementation
-- No external dependency
-
-Trade-off:
-- Not durable
-- Would use Kafka/RabbitMQ in production
+- Simplifies implementation without external dependencies
+- Trade-off: lacks durability and reliability in distributed systems
+- Production alternative: Kafka, RabbitMQ
 
 ---
 
-### Polly Retry
-- Handles transient concurrency failures
-- Improves system resilience
+### No Distributed Locking
+- Avoided Redis/distributed locks to keep system lightweight
+- Trade-off: relies on database-level concurrency control instead
 
 ---
+
+## Additional Considerations
+
+- Designed for **high concurrency scenarios** with safe stock updates
+- Ensured **idempotent APIs** for reliability under retries
+- Separated **transactional logic from side effects** to prevent data inconsistency
+- Focused on **clarity and maintainability** over over-engineering
 
 ### Transactions + RowVersion
 - Guarantees atomic updates
