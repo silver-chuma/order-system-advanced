@@ -1705,11 +1705,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/admin/JCodes/brian/stackbuld assignment/order-system-advanced/src/API/API.csproj",
+      "projectUniqueName": "/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/API/API.csproj",
       "projectName": "API",
-      "projectPath": "/Users/admin/JCodes/brian/stackbuld assignment/order-system-advanced/src/API/API.csproj",
+      "projectPath": "/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/API/API.csproj",
       "packagesPath": "/Users/admin/.nuget/packages/",
-      "outputPath": "/Users/admin/JCodes/brian/stackbuld assignment/order-system-advanced/src/API/obj/",
+      "outputPath": "/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/admin/.nuget/NuGet/NuGet.Config"
@@ -1725,11 +1725,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/admin/JCodes/brian/stackbuld assignment/order-system-advanced/src/Application/Application.csproj": {
-              "projectPath": "/Users/admin/JCodes/brian/stackbuld assignment/order-system-advanced/src/Application/Application.csproj"
+            "/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Application/Application.csproj": {
+              "projectPath": "/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Application/Application.csproj"
             },
-            "/Users/admin/JCodes/brian/stackbuld assignment/order-system-advanced/src/Infra/Infra.csproj": {
-              "projectPath": "/Users/admin/JCodes/brian/stackbuld assignment/order-system-advanced/src/Infra/Infra.csproj"
+            "/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Infra/Infra.csproj": {
+              "projectPath": "/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Infra/Infra.csproj"
             }
           }
         }

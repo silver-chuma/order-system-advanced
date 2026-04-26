@@ -14,8 +14,8 @@ public class AppDbContext : DbContext
     {
         // Enable optimistic concurrency control on Product
         modelBuilder.Entity<Product>()
-            .Property(p => p.RowVersion)
-            .IsRowVersion();
+        .Property(p => p.RowVersion)
+        .IsConcurrencyToken();
 
         /*
          WHY THIS IS IMPORTANT:

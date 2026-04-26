@@ -5,10 +5,10 @@ public class Product
 {
     public int Id { get; set; }
 
-    // Current stock level
+    public string Name { get; set; } = string.Empty;
+
     public int Stock { get; set; }
 
-    // Concurrency token
-    // Used by EF Core to detect conflicting updates
-    public byte[] RowVersion { get; set; } = new byte[0];
+    // Concurrency token (manual for SQLite)
+    public byte[] RowVersion { get; set; } = Guid.NewGuid().ToByteArray();
 }

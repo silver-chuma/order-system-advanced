@@ -9,3 +9,15 @@
 /Users/admin/JCodes/brian/stackbuld assignment/order-system-advanced/src/Domain/obj/Debug/net7.0/refint/Domain.dll
 /Users/admin/JCodes/brian/stackbuld assignment/order-system-advanced/src/Domain/obj/Debug/net7.0/Domain.pdb
 /Users/admin/JCodes/brian/stackbuld assignment/order-system-advanced/src/Domain/obj/Debug/net7.0/ref/Domain.dll
+/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Domain/bin/Debug/net7.0/Domain.deps.json
+/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Domain/bin/Debug/net7.0/Domain.dll
+/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Domain/bin/Debug/net7.0/Domain.pdb
+/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Domain/obj/Debug/net7.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Domain/obj/Debug/net7.0/Domain.AssemblyInfoInputs.cache
+/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Domain/obj/Debug/net7.0/Domain.AssemblyInfo.cs
+/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Domain/obj/Debug/net7.0/Domain.csproj.CoreCompileInputs.cache
+/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Domain/obj/Debug/net7.0/Domain.sourcelink.json
+/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Domain/obj/Debug/net7.0/Domain.dll
+/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Domain/obj/Debug/net7.0/refint/Domain.dll
+/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Domain/obj/Debug/net7.0/Domain.pdb
+/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Domain/obj/Debug/net7.0/ref/Domain.dll

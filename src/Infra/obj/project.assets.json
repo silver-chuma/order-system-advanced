@@ -1160,11 +1160,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/admin/JCodes/brian/stackbuld assignment/order-system-advanced/src/Infra/Infra.csproj",
+      "projectUniqueName": "/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Infra/Infra.csproj",
       "projectName": "Infra",
-      "projectPath": "/Users/admin/JCodes/brian/stackbuld assignment/order-system-advanced/src/Infra/Infra.csproj",
+      "projectPath": "/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Infra/Infra.csproj",
       "packagesPath": "/Users/admin/.nuget/packages/",
-      "outputPath": "/Users/admin/JCodes/brian/stackbuld assignment/order-system-advanced/src/Infra/obj/",
+      "outputPath": "/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Infra/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/admin/.nuget/NuGet/NuGet.Config"
@@ -1180,8 +1180,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/admin/JCodes/brian/stackbuld assignment/order-system-advanced/src/Domain/Domain.csproj": {
-              "projectPath": "/Users/admin/JCodes/brian/stackbuld assignment/order-system-advanced/src/Domain/Domain.csproj"
+            "/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Domain/Domain.csproj": {
+              "projectPath": "/Users/admin/JCodes/brian/stackbuld assignment/git/order-system-advanced/src/Domain/Domain.csproj"
             }
           }
         }

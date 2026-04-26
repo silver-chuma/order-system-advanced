@@ -94,10 +94,11 @@ Idempotency-Key: unique-key-123
 
 Body:
 ```json
-[
-  { "productId": 1, "quantity": 2 },
-  { "productId": 2, "quantity": 1 }
-]
+{
+  "items": [
+    { "productId": 1, "quantity": 2 }
+  ]
+}
 ```
 
 ---
@@ -220,8 +221,57 @@ Scenario:
 
 Expected:
 - Some succeed
-- Some fail
-- Stock never becomes negative
+- Some fail- Stock is **never negative**  
+- No overselling occurs  
+
+#### Verified Outcomes
+
+| Check | Result |
+|------|--------|
+| Successful order creation | ✅ |
+| Stock validation triggered | ✅ |
+| Overselling prevented | ✅ |
+| Stock consistency maintained | ✅ |
+
+ Note: Failures only occur when requested quantity exceeds available stock.
+
+## Practical Testing Guide
+
+### Concurrency Test (Parallel Requests)
+
+Simulate multiple simultaneous requests:
+
+```bash
+for i in {1..10}; do
+  curl -X POST http://localhost:5000/api/orders \
+  -H "Content-Type: application/json" \
+  -H "Idempotency-Key: test-$i" \
+  -d '{"items":[{"productId":1,"quantity":30}]}' &
+done
+wait
+
+### Idempotency Test
+
+**Headers:**
+
+Idempotency-Key: abc123
+
+**Body:**
+```json
+{
+  "items": [
+    { "productId": 1, "quantity": 2 }
+  ]
+}
+
+#### Verified Outcomes
+
+| Check | Result |
+|------|--------|
+| Duplicate request prevented | ✅ |
+| Same order returned | ✅ |
+| No extra stock deduction | ✅ |
+| System remains consistent | ✅ |
 
 ---
 
